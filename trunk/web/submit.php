@@ -157,7 +157,7 @@ if(isset($OJ_APPENDCODE)&&$OJ_APPENDCODE&&file_exists($append_file)){
 }
 //end of append 
 if($language==6)
-   $source="# coding=utf-8\n".$source;
+   $source="import io, sys\nsys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='utf8')\n".$source;
 if($test_run) $id=0;
 
 $len=strlen($source);
